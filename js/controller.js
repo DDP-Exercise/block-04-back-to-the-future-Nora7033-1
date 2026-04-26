@@ -33,5 +33,22 @@
  *     Doc Brown - 1955-11-05
  *******************************************************/
 
+import {timeModel} from "./model.time.js";
+import {digitalView} from "./view.digital.js";
+
+let timeController = {
+
+    updateTime: function() {
+        let now = new Date();
+        timeModel.setTime(now);
+        console.log(timeModel.getTime());
+
+        digitalView.update(timeModel.getTime());
+    },
+    startClock: function() {
+        setInterval(timeController.updateTime,1000);
+    }
+}
+timeController.startClock();
 // HINT:
 // setInterval(functionName, 1000); will call functionName() every 1000 miliseconds.

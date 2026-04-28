@@ -8,3 +8,85 @@ body{
     padding: 0;
     margin: 0;
 }
+.layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+#watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.clock {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border: 5px solid #00ffff;
+    border-radius: 50%;
+    background: radial-gradient(circle, #000 40%, white 100%);
+    box-shadow: 0 0 20px #00ffff;
+}
+.centerDot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #00ffff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hourHand, .minuteHand, .secondHand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+}
+.hourHand {
+    width : 4px;
+    height: 50px;
+    background: white;
+}
+.minuteHand {
+    width : 3px;
+    height: 70px;
+    background: lime;
+    box-shadow: 0 0 10px lime;
+}
+.secondHand {
+    width : 2px;
+    height: 90px;
+    background: deepskyblue;
+    box-shadow: 0 0 10px deepskyblue;
+}
+#delorean div{
+    font-size: 40px;
+    color: #00ffff;
+    font-family: monospace;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+#saveBtn {
+    background: #00ffff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: monospace;
+    cursor: wait;
+    box-shadow: 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 10px #00ffff;
+    margin: 10px;
+    border-radius: 10px;
+}

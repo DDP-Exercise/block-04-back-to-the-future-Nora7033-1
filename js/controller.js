@@ -35,20 +35,31 @@
 
 import {timeModel} from "./model.time.js";
 import {digitalView} from "./view.digital.js";
+import {analagoueView} from "./view.analagoue.js";
 
 let timeController = {
 
-    updateTime: function() {
+    updateTime: function () {
         let now = new Date();
         timeModel.setTime(now);
         console.log(timeModel.getTime());
 
         digitalView.update(timeModel.getTime());
+        analagoueView.update(timeModel.getTime());
     },
-    startClock: function() {
-        setInterval(timeController.updateTime,1000);
+    startClock: function () {
+        timeModel.loadTime();
+        setInterval(timeController.updateTime, 1000);
+    },
+    init: function () {
+        document.getElementById("saveBtn")
+            .addEventListener("click", function () {
+                console.log("clicked");
+                timeModel.saveTime();
+            })
     }
 }
 timeController.startClock();
+timeController.init();
 // HINT:
 // setInterval(functionName, 1000); will call functionName() every 1000 miliseconds.

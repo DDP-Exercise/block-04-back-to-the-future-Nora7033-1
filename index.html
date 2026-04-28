@@ -6,14 +6,22 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div>
+    <div class="layout">
         <div id="delorean">
             <h3>Delorean</h3>
         </div>
         <div id="watch">
-            <h3>Wrist-watch</h3>
+            <h3>Watch</h3>
+            <div class="clock">
+                <div class="centerDot"></div>
+                <div class="hourHand"></div>
+                <div class="minuteHand"></div>
+                <div class="secondHand"></div>
+            </div>
         </div>
     </div>
+    <button id="saveBtn">SAVE</button>
+
     <script type="module" src="./js/model.time.js"></script>
     <script type="module" src="./js/controller.js"></script>
     <script type="module" src="./js/view.digital.js"></script>

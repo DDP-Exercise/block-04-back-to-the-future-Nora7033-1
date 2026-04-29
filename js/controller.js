@@ -54,7 +54,6 @@ let timeController = {
     init: function () {
         document.getElementById("saveBtn")
             .addEventListener("click", function () {
-                console.log("clicked");
                 timeModel.saveTime();
             })
     }
